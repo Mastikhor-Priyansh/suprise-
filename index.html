@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Stupid Boss 🌷🐾 | From Priyu</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Romantic Serif, Handwritten Script & Rounded Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Quicksand', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+            script: ['Dancing Script', 'cursive'],
+          },
+          colors: {
+            blush: {
+              50: '#fff5f8',
+              100: '#ffe4ec',
+              200: '#fecdd8',
+              300: '#fda4b8',
+              400: '#fb7192',
+              500: '#f43f6b',
+              600: '#e11d52',
+            },
+            cream: '#fffaf7',
+            lavender: '#f5edff',
+          },
+          animation: {
+            'float-slow': 'floatSlow 5s ease-in-out infinite',
+            'wiggle': 'wiggle 2.5s ease-in-out infinite',
+            'sway': 'sway 4s ease-in-out infinite',
+          },
+          keyframes: {
+            floatSlow: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            },
+            wiggle: {
+              '0%, 100%': { transform: 'rotate(-3deg)' },
+              '50%': { transform: 'rotate(3deg)' },
+            },
+            sway: {
+              '0%, 100%': { transform: 'rotate(-4deg) translateY(0)' },
+              '50%': { transform: 'rotate(4deg) translateY(-3px)' },
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #fff5f8 0%, #ffe4ec 52%, #f5edff 100%);
+      color: #4a2535;
+      overflow-x: hidden;
+    }
+
+    /* High-contrast solid white/blush cards strictly layered above background canvas */
+    .glass-card {
+      position: relative;
+      z-index: 10;
+      background: #ffffff;
+      border: 1.5px solid #fda4b8;
+      box-shadow: 0 16px 38px -10px rgba(244, 63, 107, 0.16);
+    }
+
+    .polaroid-card {
+      position: relative;
+      z-index: 10;
+      background: #ffffff;
+      padding: 12px 12px 18px 12px;
+      border-radius: 20px;
+      box-shadow: 0 12px 26px rgba(74, 37, 53, 0.1);
+      border: 1.5px solid #ffe4ec;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .polaroid-card:hover {
+      transform: translateY(-5px) rotate(0deg) !important;
+      box-shadow: 0 20px 36px rgba(244, 63, 107, 0.18);
+    }
+
+    /* Explicit visibility rules so pages NEVER get stuck invisible */
+    .app-page {
+      display: none;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .app-page.active {
+      display: block !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    @keyframes shakeError {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-10px); }
+      40% { transform: translateX(10px); }
+      60% { transform: translateX(-7px); }
+      80% { transform: translateX(7px); }
+    }
+
+    .shake-box {
+      animation: shakeError 0.45s ease-in-out;
+    }
+
+    /* Bouquet Stage Animations */
+    @keyframes bouquetOffer {
+      0%, 100% { transform: translateY(0px) rotate(-1.5deg) scale(1); }
+      50% { transform: translateY(-10px) rotate(1.5deg) scale(1.025); }
+    }
+
+    @keyframes petalSwayLeft {
+      0%, 100% { transform: rotate(-3deg); }
+      50% { transform: rotate(4deg); }
+    }
+
+    @keyframes petalSwayRight {
+      0%, 100% { transform: rotate(3deg); }
+      50% { transform: rotate(-4deg); }
+    }
+
+    @keyframes sparklePop {
+      0%, 100% { transform: scale(0.75) translateY(0); opacity: 0.45; }
+      50% { transform: scale(1.25) translateY(-8px); opacity: 1; }
+    }
+
+    @keyframes heartFloatUp {
+      0% { transform: translateY(12px) scale(0.7); opacity: 0; }
+      35% { opacity: 0.95; }
+      100% { transform: translateY(-38px) scale(1.15); opacity: 0; }
+    }
+
+    .bouquet-offer-anim {
+      animation: bouquetOffer 3.6s ease-in-out infinite;
+      transform-origin: center bottom;
+    }
+
+    .tulip-sway-left {
+      animation: petalSwayLeft 3.2s ease-in-out infinite;
+      transform-origin: 180px 270px;
+    }
+
+    .tulip-sway-right {
+      animation: petalSwayRight 3.4s ease-in-out infinite;
+      transform-origin: 180px 270px;
+    }
+
+    .stage-sparkle {
+      animation: sparklePop 2.4s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    .stage-heart-1 {
+      animation: heartFloatUp 2.8s ease-out infinite;
+    }
+
+    .stage-heart-2 {
+      animation: heartFloatUp 3.3s ease-out 1.1s infinite;
+    }
+
+    .stage-heart-3 {
+      animation: heartFloatUp 3s ease-out 2s infinite;
+    }
+
+    /* Confetti & floating petal canvas strictly behind all cards, text & images */
+    #confetti-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #fff5f8;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #fda4b8;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="min-h-screen selection:bg-blush-200 selection:text-blush-600 flex flex-col">
+
+  <!-- Confetti & Tulip Petal Canvas (Layered Behind Content at z-index: 0) -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- ===================================================================== -->
+  <!-- PAGE 1: SECRET PASSWORD LOCK SCREEN (12/12/2008)                      -->
+  <!-- ===================================================================== -->
+  <section id="page-1" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gradient-to-br from-blush-100 via-cream to-lavender overflow-y-auto">
+    <!-- Floating Background Tulips & Paws (Strictly Outer Edges & z-0) -->
+    <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden opacity-45" aria-hidden="true">
+      <div class="absolute top-6 left-[3%] text-xl sm:text-2xl animate-sway">🌷</div>
+      <div class="absolute top-12 right-[4%] text-lg sm:text-xl animate-float-slow">🐾</div>
+      <div class="absolute bottom-10 left-[4%] text-xl sm:text-2xl animate-float-slow">🐱</div>
+      <div class="absolute bottom-8 right-[3%] text-xl sm:text-2xl animate-sway">🌷</div>
+      <div class="absolute top-1/3 left-[2%] text-base sm:text-xl animate-pulse">💖</div>
+      <div class="absolute top-1/4 right-[3%] text-base sm:text-xl animate-pulse">✨</div>
+    </div>
+
+    <!-- Password Card -->
+    <div id="password-card" class="glass-card relative z-10 w-full max-w-md rounded-3xl p-7 sm:p-9 text-center shadow-2xl my-auto">
+      <!-- Cute Kitten Holding a Tulip SVG -->
+      <div class="mx-auto mb-3 w-28 h-28 animate-float-slow">
+        <svg viewBox="0 0 160 160" class="w-full h-full drop-shadow-md" aria-label="Cute kitten holding a pink tulip">
+          <circle cx="80" cy="84" r="66" fill="#ffe4ec" opacity="0.7" />
+          <polygon points="44,58 38,24 68,44" fill="#ffffff" stroke="#f43f6b" stroke-width="3" stroke-linejoin="round" />
+          <polygon points="47,53 43,31 62,45" fill="#fecdd8" />
+          <polygon points="116,58 122,24 92,44" fill="#ffffff" stroke="#f43f6b" stroke-width="3" stroke-linejoin="round" />
+          <polygon points="113,53 117,31 98,45" fill="#fecdd8" />
+          <ellipse cx="80" cy="76" rx="44" ry="36" fill="#ffffff" stroke="#f43f6b" stroke-width="3" />
+          <circle cx="64" cy="73" r="5" fill="#4a2535" />
+          <circle cx="62.5" cy="71.5" r="1.8" fill="#ffffff" />
+          <circle cx="96" cy="73" r="5" fill="#4a2535" />
+          <circle cx="94.5" cy="71.5" r="1.8" fill="#ffffff" />
+          <ellipse cx="53" cy="82" rx="6" ry="3.5" fill="#fda4b8" opacity="0.75" />
+          <ellipse cx="107" cy="82" rx="6" ry="3.5" fill="#fda4b8" opacity="0.75" />
+          <polygon points="77,80 83,80 80,84" fill="#fb7192" />
+          <path d="M73 86 Q76.5 91 80 85 Q83.5 91 87 86" fill="none" stroke="#4a2535" stroke-width="2.4" stroke-linecap="round" />
+          <line x1="30" y1="74" x2="46" y2="76" stroke="#fda4b8" stroke-width="2" stroke-linecap="round" />
+          <line x1="30" y1="82" x2="46" y2="81" stroke="#fda4b8" stroke-width="2" stroke-linecap="round" />
+          <line x1="114" y1="76" x2="130" y2="74" stroke="#fda4b8" stroke-width="2" stroke-linecap="round" />
+          <line x1="114" y1="81" x2="130" y2="82" stroke="#fda4b8" stroke-width="2" stroke-linecap="round" />
+          <path d="M80 142 L80 106" stroke="#4d7c5b" stroke-width="4" stroke-linecap="round" />
+          <path d="M80 128 Q64 120 66 108 Q78 114 80 126" fill="#689f77" />
+          <path d="M80 126 Q96 118 94 106 Q82 112 80 124" fill="#689f77" />
+          <path d="M67 96 C67 84, 93 84, 93 96 C93 107, 86 112, 80 112 C74 112, 67 107, 67 96 Z" fill="#f43f6b" />
+          <path d="M73 94 L80 83 L87 94" fill="#fb7192" />
+          <ellipse cx="72" cy="118" rx="8" ry="6" fill="#ffffff" stroke="#f43f6b" stroke-width="2.5" />
+          <ellipse cx="88" cy="118" rx="8" ry="6" fill="#ffffff" stroke="#f43f6b" stroke-width="2.5" />
+        </svg>
+      </div>
+
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-blush-100 px-3.5 py-1 text-xs font-bold tracking-wide text-blush-600 uppercase mb-2">
+        🔒 VIP Access Only • From Priyu
+      </span>
+
+      <h1 class="font-serif text-3xl sm:text-4xl font-bold text-[#4a2535] leading-tight">
+        For My <span class="text-blush-500 italic">Stupid Boss</span> 🌷
+      </h1>
+      <p class="mt-2 text-sm sm:text-base text-gray-600">
+        A secret birthday surprise filled with tulips, cute kittens & all my love is locked inside...
+      </p>
+
+      <!-- Hint Box -->
+      <div class="mt-5 rounded-2xl bg-blush-50 border border-blush-200 px-4 py-3 text-center">
+        <p class="text-sm sm:text-base font-bold text-blush-600">
+          Hint: priyu bb born date 🐾
+        </p>
+      </div>
+
+      <!-- Password Form (NO 12/12/2008 in placeholder) -->
+      <form id="unlock-form" class="mt-5 space-y-3.5" novalidate>
+        <input
+          id="password-input"
+          type="text"
+          inputmode="numeric"
+          autocomplete="off"
+          placeholder="Enter secret date (DD/MM/YYYY)"
+          class="w-full rounded-2xl border-2 border-blush-200 bg-white px-4 py-3.5 text-center text-lg font-bold tracking-wider text-[#4a2535] placeholder:text-gray-400 placeholder:font-normal placeholder:tracking-normal focus:border-blush-500 focus:outline-none focus:ring-4 focus:ring-blush-200/50 transition"
+        />
+
+        <p id="password-error" class="hidden rounded-xl bg-rose-100 border border-rose-300 px-3 py-2 text-xs sm:text-sm font-semibold text-rose-700">
+          Meow! 😿 Wrong date, Stupid Boss! Think about when Priyu bb was born (DD/MM/YYYY) 💕
+        </p>
+
+        <button
+          type="submit"
+          class="w-full rounded-2xl bg-gradient-to-r from-blush-500 via-pink-500 to-rose-500 px-6 py-3.5 text-base font-bold text-white shadow-lg shadow-blush-400/35 hover:from-blush-600 hover:to-rose-600 active:scale-[0.98] transition cursor-pointer flex items-center justify-center gap-2"
+        >
+          <span>Unlock Birthday Surprise</span>
+          <span class="text-lg">🌷✨</span>
+        </button>
+      </form>
+
+      <p class="mt-4 text-xs text-gray-400">
+        Made with endless love by <span class="font-semibold text-blush-500">Priyu</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- UNLOCKED MULTI-PAGE CONTAINER (PAGES 2 TO 5)                          -->
+  <!-- ===================================================================== -->
+  <div id="unlocked-app" class="hidden relative z-10 flex-1 flex flex-col justify-between pb-14">
+
+    <!-- Persistent Outer-Edge Floating Tulips & Hearts (Behind Cards at z-0) -->
+    <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden opacity-45" aria-hidden="true">
+      <div class="absolute top-20 left-[2%] text-lg sm:text-2xl animate-sway">🌷</div>
+      <div class="absolute top-1/3 left-[4%] text-base sm:text-xl animate-float-slow">🐾</div>
+      <div class="absolute bottom-24 left-[3%] text-lg sm:text-2xl animate-pulse">💖</div>
+      <div class="absolute top-24 right-[3%] text-lg sm:text-2xl animate-float-slow">✨</div>
+      <div class="absolute top-1/2 right-[2%] text-base sm:text-xl animate-sway">🌷</div>
+      <div class="absolute bottom-20 right-[4%] text-lg sm:text-2xl animate-pulse">🐱</div>
+    </div>
+
+    <!-- Top Step Progress & Quick Nav Header -->
+    <header class="sticky top-3 z-40 mx-auto w-full max-w-4xl px-4">
+      <div class="glass-card rounded-full px-4 sm:px-6 py-2.5 flex items-center justify-between gap-2">
+        <div class="flex items-center gap-2 font-serif font-bold text-sm sm:text-base text-blush-600">
+          <span>🌷</span>
+          <span>Stupid Boss's Day</span>
+        </div>
+
+        <!-- Step Pills -->
+        <div class="flex items-center gap-1 sm:gap-1.5 flex-wrap justify-end" id="page-indicators">
+          <button type="button" onclick="goToPage(2)" data-step="2" class="step-pill rounded-full px-2.5 sm:px-3 py-1 text-xs font-bold transition cursor-pointer bg-blush-500 text-white">
+            1. Note 💌
+          </button>
+          <button type="button" onclick="goToPage(3)" data-step="3" class="step-pill rounded-full px-2.5 sm:px-3 py-1 text-xs font-bold transition cursor-pointer bg-blush-100 text-blush-600 hover:bg-blush-200">
+            2. Pics 📸
+          </button>
+          <button type="button" onclick="goToPage(4)" data-step="4" class="step-pill rounded-full px-2.5 sm:px-3 py-1 text-xs font-bold transition cursor-pointer bg-blush-100 text-blush-600 hover:bg-blush-200">
+            3. Game 🎮
+          </button>
+          <button type="button" onclick="goToPage(5)" data-step="5" class="step-pill rounded-full px-2.5 sm:px-3 py-1 text-xs font-bold transition cursor-pointer bg-blush-100 text-blush-600 hover:bg-blush-200">
+            4. Us ❤️
+          </button>
+          <button type="button" onclick="goToPage(6)" data-step="6" class="step-pill rounded-full px-2.5 sm:px-3 py-1 text-xs font-bold transition cursor-pointer bg-blush-100 text-blush-600 hover:bg-blush-200">
+            5. Bouquet 🌷
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- =================================================================== -->
+    <!-- PAGE 2: BIRTHDAY NOTE (SOLID HIGH-CONTRAST CARD, 100% VISIBLE)      -->
+    <!-- =================================================================== -->
+    <section id="page-2" class="app-page active relative z-10 mx-auto w-full max-w-3xl px-4 pt-8 sm:pt-12">
+      <div class="glass-card rounded-3xl p-6 sm:p-10 relative overflow-hidden">
+        <!-- Decorative Peeking Kitten & Tulip SVG Corner Accent -->
+        <div class="flex items-center justify-between mb-4">
+          <span class="inline-flex items-center gap-1.5 rounded-full bg-blush-100 border border-blush-200 px-3.5 py-1 text-xs font-bold text-blush-600 uppercase tracking-wider">
+            Chapter 1 of 5 • Birthday Wish 💌
+          </span>
+          <!-- Cute Peeking Kitten SVG -->
+          <svg viewBox="0 0 110 70" class="w-20 h-12 sm:w-24 sm:h-14 animate-wiggle" aria-hidden="true">
+            <polygon points="24,38 18,12 42,28" fill="#ffffff" stroke="#f43f6b" stroke-width="2.5" stroke-linejoin="round" />
+            <polygon points="26,34 22,18 37,29" fill="#fecdd8" />
+            <polygon points="86,38 92,12 68,28" fill="#ffffff" stroke="#f43f6b" stroke-width="2.5" stroke-linejoin="round" />
+            <polygon points="84,34 88,18 73,29" fill="#fecdd8" />
+            <ellipse cx="55" cy="46" rx="34" ry="22" fill="#ffffff" stroke="#f43f6b" stroke-width="2.5" />
+            <circle cx="43" cy="43" r="3.8" fill="#4a2535" />
+            <circle cx="67" cy="43" r="3.8" fill="#4a2535" />
+            <polygon points="52,48 58,48 55,51" fill="#fb7192" />
+            <path d="M49 53 Q52 57 55 52 Q58 57 61 53" fill="none" stroke="#4a2535" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-[#4a2535] leading-tight">
+          Happy Birthday, My <span class="text-blush-500 italic">Stupid Boss!</span> 🎂🌷
+        </h2>
+
+        <!-- Solid High-Contrast Letter Box -->
+        <div class="mt-6 rounded-2xl bg-blush-50/90 border border-blush-200 p-5 sm:p-8 space-y-4 text-base sm:text-lg text-[#4a2535] leading-relaxed">
+          <p>
+            My Dearest Stupid Boss, Happy Birthday to the person who holds my whole heart! Today is all about celebrating your smile, your happiness, and the magic you bring into my life every single day—even from miles away.
+          </p>
+
+          <p>
+            You aren't just <span class="font-bold text-blush-600">my girlfriend</span>—you are <span class="font-bold text-blush-600">my bestie</span>, <span class="font-bold text-blush-600">my cute boss</span>, <span class="font-bold text-blush-600">my stupid</span>, <span class="font-bold text-blush-600">my little kitty</span>, and honestly <span class="font-bold text-blush-600">my everything</span>. Being in a long-distance relationship with you has taught me that true closeness has nothing to do with distance; it's in every late-night call, every random text, and every silly laugh we share across screens.
+          </p>
+
+          <p>
+            I wish you all the warmth, laughter, and tulip-filled happiness in the world today and always. Keep shining and smiling for me today
+          </p>
+
+          <div class="pt-3 border-t border-blush-200/80 flex items-center justify-between flex-wrap gap-2">
+            <span class="text-xl sm:text-2xl">🌷🐱💖</span>
+            <p class="font-script text-2xl sm:text-3xl font-bold text-blush-600">
+              Forever yours, Priyu 🐾💖
+            </p>
+          </div>
+        </div>
+
+        <!-- Next Page Button -->
+        <div class="mt-7 flex justify-end">
+          <button
+            type="button"
+            onclick="goToPage(3)"
+            class="w-full sm:w-auto rounded-2xl bg-gradient-to-r from-blush-500 via-pink-500 to-rose-500 px-7 py-4 text-base font-bold text-white shadow-lg shadow-blush-400/35 hover:scale-[1.02] active:scale-[0.98] transition cursor-pointer"
+          >
+            See Your Cute &amp; Funny Pics →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- PAGE 3: DEDICATED TO HER PICS (5 CUTE & PRETTY + 4 FUNNY BESTIE)    -->
+    <!-- =================================================================== -->
+    <section id="page-3" class="app-page relative z-10 mx-auto w-full max-w-5xl px-4 pt-8 sm:pt-12">
+      <!-- Top Navigation Bar for Page 3 -->
+      <div class="mb-6 flex flex-wrap items-center justify-between gap-3">
+        <button
+          type="button"
+          onclick="goToPage(2)"
+          class="rounded-2xl border-2 border-blush-200 bg-white px-5 py-2.5 text-sm font-bold text-blush-600 hover:bg-blush-50 transition cursor-pointer"
+        >
+          ← Back
+        </button>
+        <button
+          type="button"
+          onclick="goToPage(4)"
+          class="rounded-2xl bg-gradient-to-r from-blush-500 to-pink-500 px-5 py-2.5 text-sm font-bold text-white shadow-md hover:scale-[1.02] transition cursor-pointer"
+        >
+          Next: Our Game Memory →
+        </button>
+      </div>
+
+      <div class="relative z-10 text-center mb-8">
+        <span class="inline-block rounded-full bg-blush-100 border border-blush-200 px-4 py-1 text-xs font-bold text-blush-600 uppercase tracking-wider">
+          Chapter 2 of 5 • The Birthday Queen
+        </span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-[#4a2535] mt-2">
+          Two Sides of My <span class="text-blush-500 italic">Stupid Boss</span> 👑🐾
+        </h2>
+        <p class="text-sm sm:text-base text-gray-600 mt-2 max-w-xl mx-auto">
+          Because you're not just the prettiest girl I know—you're also my absolute bestie who makes me laugh endlessly!
+        </p>
+      </div>
+
+      <!-- PART 1: CUTE & PRETTY (5 PICS) -->
+      <div class="glass-card rounded-3xl p-6 sm:p-8 mb-8">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-6">
+          <div>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-pink-100 px-3 py-1 text-xs font-bold text-blush-600">
+              🌷 Part 1 • Angel Mode
+            </span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-[#4a2535] mt-1">
+              Cute & Pretty Stupid Boss 💖
+            </h3>
+          </div>
+          <span class="text-2xl sm:text-3xl animate-sway">🌷🐱🌷</span>
+        </div>
+
+        <!-- 5 Polaroid Cards: cute1.jpg to cute5.jpg -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Cute Pic 1 -->
+          <div class="polaroid-card -rotate-1">
+            <div class="aspect-[4/5] w-full overflow-hidden rounded-xl bg-blush-50">
+              <img
+                src="cute1.jpg"
+                alt="Cute Stupid Boss 1"
+                onerror="setFallbackSvg(this, 'cute1.jpg', 'Place cute1.jpg in GitHub folder 🌷', '#ffe4ec')"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <p class="font-script text-xl text-center text-blush-600 mt-3">
+              Prettier than every tulip 🌷
+            </p>
+          </div>
+
+          <!-- Cute Pic 2 -->
+          <div class="polaroid-card rotate-1">
+            <div class="aspect-[4/5] w-full overflow-hidden rounded-xl bg-blush-50">
+              <img
+                src="cute2.jpg"
+                alt="Cute Stupid Boss 2"
+                onerror="setFallbackSvg(this, 'cute2.jpg', 'Place cute2.jpg in GitHub folder ✨', '#fce7f3')"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <p class="font-script text-xl text-center text-blush-600 mt-3">
+              That smile steals my heart ✨
+            </p>
+          </div>
+
+          <!-- Cute Pic 3 -->
+          <div class="polaroid-card -rotate-1">
+            <div class="aspect-[4/5] w-full overflow-hidden rounded-xl bg-blush-50">
+              <img
+                src="cute3.jpg"
+                alt="Cute Stupid Boss 3"
+                onerror="setFallbackSvg(this, 'cute3.jpg', 'Place cute3.jpg in GitHub folder 🐱', '#fae8ff')"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <p class="font-script text-xl text-center text-blush-600 mt-3">
+              Cutest kitten energy 🐱💕
+            </p>
+          </div>
+
+          <!-- Cute Pic 4 -->
+          <div class="polaroid-card rotate-1">
+            <div class="aspect-[4/5] w-full overflow-hidden rounded-xl bg-blush-50">
+              <img
+                src="cute4.jpg"
+                alt="Cute Stupid Boss 4"
+                onerror="setFallbackSvg(this, 'cute4.jpg', 'Place cute4.jpg in GitHub folder 👑', '#fff1f2')"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <p class="font-script text-xl text-center text-blush-600 mt-3">
+              My gorgeous birthday queen 👑
+            </p>
+          </div>
+
+          <!-- Cute Pic 5 -->
+          <div class="polaroid-card -rotate-1 sm:col-span-2 lg:col-span-1">
+            <div class="aspect-[4/5] w-full overflow-hidden rounded-xl bg-blush-50">
+              <img
+                src="cute5.jpg"
+                alt="Cute Stupid Boss 5"
+                onerror="setFallbackSvg(this, 'cute5.jpg', 'Place cute5.jpg in GitHub folder 💖', '#ffe4ec')"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <p class="font-script text-xl text-center text-blush-600 mt-3">
+              Effortlessly adorable always 💖
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PART 2: FUNNY BESTIE MOMENTS (4 PICS) -->
+      <div class="glass-card rounded-3xl p-6 sm:p-8 border-2 border-purple-200">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-6">
+          <div>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-purple-100 px-3 py-1 text-xs font-bold text-purple-700">
+              😂 Part 2 • Bestie Mode Unlocked
+            </span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-[#4a2535] mt-1">
+              Funny Bestie Moments 🤪🐾
+            </h3>
+            <p class="text-xs sm:text-sm text-gray-600 mt-0.5">
+              Because you're my #1 bestie first, and these chaotic pics are pure gold!
+            </p>
+          </div>
+          <span class="text-2xl sm:text-3xl animate-wiggle">😹🎉</span>
+        </div>
+
+        <!-- 4 Polaroid Cards: funny1.jpg to funny4.jpg -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- Funny Pic 1 -->
+          <div class="polaroid-card rotate-1">
+            <div class="aspect-[4/5] w-full overflow-hidden rounded-xl bg-purple-50">
+              <img
+                src="funny1.jpg"
+                alt="Funny Bestie Pic 1"
+                onerror="setFallbackSvg(this, 'funny1.jpg', 'Place funny1.jpg in GitHub folder 😂', '#f3e8ff')"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <p class="font-script text-xl text-center text-purple-700 mt-3">
+              Certified Stupid Boss moment 😂
+            </p>
+          </div>
+
+          <!-- Funny Pic 2 -->
+          <div class="polaroid-card -rotate-1">
+            <div class="aspect-[4/5] w-full overflow-hidden rounded-xl bg-purple-50">
+              <img
+                src="funny2.jpg"
+                alt="Funny Bestie Pic 2"
+                onerror="setFallbackSvg(this, 'funny2.jpg', 'Place funny2.jpg in GitHub folder 🤪', '#fef3c7')"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <p class="font-script text-xl text-center text-purple-700 mt-3">
+              Zero braincells, 100% iconic 🤪
+            </p>
+          </div>
+
+          <!-- Funny Pic 3 -->
+          <div class="polaroid-card rotate-1">
+            <div class="aspect-[4/5] w-full overflow-hidden rounded-xl bg-purple-50">
+              <img
+                src="funny3.jpg"
+                alt="Funny Bestie Pic 3"
+                onerror="setFallbackSvg(this, 'funny3.jpg', 'Place funny3.jpg in GitHub folder 😹', '#ffe4e6')"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <p class="font-script text-xl text-center text-purple-700 mt-3">
+              My favorite crackhead bestie 😹
+            </p>
+          </div>
+
+          <!-- Funny Pic 4 -->
+          <div class="polaroid-card -rotate-1">
+            <div class="aspect-[4/5] w-full overflow-hidden rounded-xl bg-purple-50">
+              <img
+                src="funny4.jpg"
+                alt="Funny Bestie Pic 4"
+                onerror="setFallbackSvg(this, 'funny4.jpg', 'Place funny4.jpg in GitHub folder 🤣', '#e0f2fe')"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <p class="font-script text-xl text-center text-purple-700 mt-3">
+              Still cute even when goofy 🤣💖
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Page 3 Navigation -->
+      <div class="mt-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-3">
+        <button
+          type="button"
+          onclick="goToPage(2)"
+          class="w-full sm:w-auto rounded-2xl border-2 border-blush-200 bg-white px-6 py-3 text-sm sm:text-base font-bold text-blush-600 hover:bg-blush-50 transition cursor-pointer"
+        >
+          ← Back
+        </button>
+        <button
+          type="button"
+          onclick="goToPage(4)"
+          class="w-full sm:w-auto rounded-2xl bg-gradient-to-r from-blush-500 via-pink-500 to-rose-500 px-7 py-3.5 text-sm sm:text-base font-bold text-white shadow-lg shadow-blush-400/35 hover:scale-[1.02] active:scale-[0.98] transition cursor-pointer"
+        >
+          Next: Our Game Memory →
+        </button>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- PAGE 4: DEDICATED TO ONE GAME PIC (1 PIC)                           -->
+    <!-- =================================================================== -->
+    <section id="page-4" class="app-page relative z-10 mx-auto w-full max-w-3xl px-4 pt-8 sm:pt-12">
+      <div class="relative z-10 text-center mb-6">
+        <span class="inline-block rounded-full bg-purple-100 border border-purple-200 px-4 py-1 text-xs font-bold text-purple-700 uppercase tracking-wider">
+          Chapter 3 of 5 • Player 1 & Player 2
+        </span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-[#4a2535] mt-2">
+          Our Favorite <span class="text-blush-500 italic">Game Memory</span> 🎮🐾
+        </h2>
+        <p class="text-sm sm:text-base text-gray-600 mt-2">
+          No matter how many miles are between us, jumping into a game together makes it feel like you're sitting right beside me!
+        </p>
+      </div>
+
+      <!-- Single Featured Game Pic Showcase Card -->
+      <div class="glass-card rounded-3xl p-6 sm:p-9 text-center relative overflow-hidden border-2 border-purple-200">
+        <div class="flex justify-center items-center gap-3 mb-4">
+          <span class="rounded-full bg-blush-100 px-3.5 py-1 text-xs font-bold text-blush-600">
+            🏆 MVP Duo: Priyu & Stupid Boss
+          </span>
+          <span class="text-2xl animate-wiggle">🐱🎧</span>
+        </div>
+
+        <!-- 1 Featured Polaroid Frame: game1.jpg -->
+        <div class="polaroid-card max-w-xl mx-auto">
+          <div class="aspect-video w-full overflow-hidden rounded-2xl bg-purple-50">
+            <img
+              src="game1.jpg"
+              alt="Our Game Memory"
+              onerror="setFallbackSvg(this, 'game1.jpg', 'Place game1.jpg in GitHub folder 🎮', '#f3e8ff')"
+              class="h-full w-full object-cover"
+            />
+          </div>
+          <p class="font-script text-2xl sm:text-3xl text-blush-600 mt-4">
+            "In every game & across every mile, I always pick you on my team" 🎮🌷
+          </p>
+          <p class="text-xs sm:text-sm text-gray-500 mt-1">
+            Whether I'm carrying you or you're bossing me around in the lobby—you're my favorite duo forever!
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 4 Navigation -->
+      <div class="mt-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-3">
+        <button
+          type="button"
+          onclick="goToPage(3)"
+          class="w-full sm:w-auto rounded-2xl border-2 border-blush-200 bg-white px-6 py-3 text-sm sm:text-base font-bold text-blush-600 hover:bg-blush-50 transition cursor-pointer"
+        >
+          ← Back
+        </button>
+        <button
+          type="button"
+          onclick="goToPage(5)"
+          class="w-full sm:w-auto rounded-2xl bg-gradient-to-r from-blush-500 via-pink-500 to-rose-500 px-7 py-3.5 text-sm sm:text-base font-bold text-white shadow-lg shadow-blush-400/35 hover:scale-[1.02] active:scale-[0.98] transition cursor-pointer"
+        >
+          Next: Us Together →
+        </button>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- PAGE 5: DEDICATED TO US - PARAGRAPH & 1 PIC                         -->
+    <!-- =================================================================== -->
+    <section id="page-5" class="app-page relative z-10 mx-auto w-full max-w-4xl px-4 pt-8 sm:pt-12">
+      <div class="relative z-10 text-center mb-6">
+        <span class="inline-block rounded-full bg-blush-100 border border-blush-200 px-4 py-1 text-xs font-bold text-blush-600 uppercase tracking-wider">
+          Chapter 4 of 5 • Forever & Always
+        </span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-[#4a2535] mt-2">
+          Just <span class="text-blush-500 italic">Us</span> — Priyu & Stupid Boss ❤️🌷
+        </h2>
+      </div>
+
+      <div class="glass-card rounded-3xl p-6 sm:p-10 relative overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 items-center">
+          <!-- Left: 1 Couple Picture (us1.jpg) -->
+          <div class="lg:col-span-5">
+            <div class="polaroid-card -rotate-1">
+              <div class="aspect-[4/5] w-full overflow-hidden rounded-2xl bg-blush-50">
+                <img
+                  src="us1.jpg"
+                  alt="Priyu and Stupid Boss Together"
+                  onerror="setFallbackSvg(this, 'us1.jpg', 'Place us1.jpg in GitHub folder ❤️', '#ffe4ec')"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <p class="font-script text-2xl text-center text-blush-600 mt-3">
+                My favorite place in the world ❤️
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Heartfelt Long-Distance Closing Paragraph Dedicated to Us -->
+          <div class="lg:col-span-7 space-y-4">
+            <div class="flex items-center gap-2 text-2xl">
+              <span>🌷</span>
+              <span>🐱</span>
+              <span>💖</span>
+            </div>
+
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-[#4a2535]">
+              Best Friends, Soulmates & Partners Across Every Mile
+            </h3>
+
+            <div class="rounded-2xl bg-blush-50/90 border border-blush-200 p-5 sm:p-6 space-y-3.5 text-sm sm:text-base text-[#4a2535] leading-relaxed">
+              <p>
+                Looking at us, I still feel like the luckiest guy alive. Even with distance between our cities, having you as my girlfriend and my <span class="font-bold text-blush-600">best friend</span> makes every single day feel warm, effortless, and full of laughter.
+              </p>
+              <p>
+                Every late-night call, every shared meme, every game session, and every sweet message reminds me that no distance could ever dim what we have. One day soon, all these miles will disappear—and until then, my heart is always right there with you.
+              </p>
+              <p>
+                Happy Birthday once again, my <span class="font-bold text-blush-600">Stupid Boss</span>! May your year bloom as brightly as a garden full of tulips. I love you endlessly—today, tomorrow, and always. 🌷🐾
+              </p>
+              <p class="font-script text-2xl sm:text-3xl text-blush-600 text-right pt-1">
+                With all my love, Priyu ❤️
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page 5 Navigation -->
+      <div class="mt-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-3">
+        <button
+          type="button"
+          onclick="goToPage(4)"
+          class="w-full sm:w-auto rounded-2xl border-2 border-blush-200 bg-white px-6 py-3 text-sm sm:text-base font-bold text-blush-600 hover:bg-blush-50 transition cursor-pointer"
+        >
+          ← Back
+        </button>
+        <button
+          type="button"
+          onclick="goToPage(6)"
+          class="w-full sm:w-auto rounded-2xl bg-gradient-to-r from-blush-500 via-pink-500 to-purple-500 px-7 py-3.5 text-sm sm:text-base font-bold text-white shadow-lg shadow-blush-400/35 hover:scale-[1.02] active:scale-[0.98] transition cursor-pointer"
+        >
+          One Last Surprise For You 🌷 →
+        </button>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- PAGE 6: GRAND FINALE TULIP BOUQUET DELIVERY ANIMATION               -->
+    <!-- =================================================================== -->
+    <section id="page-6" class="app-page relative z-10 mx-auto w-full max-w-4xl px-4 pt-8 sm:pt-12">
+      <div class="glass-card rounded-3xl p-6 sm:p-10 text-center relative overflow-hidden border-2 border-blush-300">
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-blush-100 border border-blush-200 px-4 py-1 text-xs font-bold text-blush-600 uppercase tracking-wider">
+          Chapter 5 of 5 • Special Delivery For You 🌷🐾
+        </span>
+
+        <!-- Top Bold Romantic Headline -->
+        <h2
+          class="mt-4 font-script text-3xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blush-600 via-pink-500 to-purple-600 leading-tight drop-shadow-sm tracking-wide"
+        >
+          I LOVEEEEEEEE YOUUUU MY CUTEE STUPID
+        </h2>
+
+        <p class="mt-2 text-sm sm:text-base text-gray-600 max-w-xl mx-auto">
+          Since I can't hand you real tulips in person today, my little kitty messenger brought a whole blooming bouquet just for you!
+        </p>
+
+        <!-- Multi-Layered Animated Kitten + 9-Tulip Bouquet Stage -->
+        <div class="mt-6 mx-auto max-w-lg rounded-3xl bg-gradient-to-b from-blush-50 via-cream to-lavender/80 border-2 border-blush-200 p-4 sm:p-6 shadow-inner relative">
+          <div class="bouquet-offer-anim mx-auto w-full max-w-[360px]">
+            <svg
+              viewBox="0 0 360 360"
+              class="w-full h-auto drop-shadow-md"
+              role="img"
+              aria-label="Cute white kitten presenting a lush 9-tulip bouquet wrapped in pastel paper and satin ribbon"
+            >
+              <defs>
+                <radialGradient id="stageGlow" cx="50%" cy="48%" r="46%">
+                  <stop offset="0%" stop-color="#ffe4ec" stop-opacity="0.95" />
+                  <stop offset="65%" stop-color="#f5edff" stop-opacity="0.55" />
+                  <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                </radialGradient>
+                <linearGradient id="wrapFront" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fff1f5" />
+                  <stop offset="50%" stop-color="#fed7e2" />
+                  <stop offset="100%" stop-color="#fbb6ce" />
+                </linearGradient>
+                <linearGradient id="wrapBack" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#f3d5b5" />
+                  <stop offset="100%" stop-color="#e6b89c" />
+                </linearGradient>
+                <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#e11d52" />
+                  <stop offset="50%" stop-color="#fb7192" />
+                  <stop offset="100%" stop-color="#e11d52" />
+                </linearGradient>
+              </defs>
+
+              <!-- Soft Glowing Aura Backdrop -->
+              <circle cx="180" cy="180" r="158" fill="url(#stageGlow)" />
+
+              <!-- Animated Floating Hearts & Sparkles Inside Stage -->
+              <g class="stage-heart-1">
+                <path d="M76 115 C76 108, 66 108, 66 115 C66 121, 76 127, 76 127 C76 127, 86 121, 86 115 C86 108, 76 108, 76 115 Z" fill="#fb7192" />
+              </g>
+              <g class="stage-heart-2">
+                <path d="M286 108 C286 101, 276 101, 276 108 C276 114, 286 120, 286 120 C286 120, 296 114, 296 108 C296 101, 286 101, 286 108 Z" fill="#f43f6b" />
+              </g>
+              <g class="stage-heart-3">
+                <path d="M180 42 C180 36, 172 36, 172 42 C172 47, 180 52, 180 52 C180 52, 188 47, 188 42 C188 36, 180 36, 180 42 Z" fill="#c084fc" />
+              </g>
+
+              <!-- Twinkling 4-Point Stars -->
+              <path class="stage-sparkle" d="M56 165 L59 156 L62 165 L71 168 L62 171 L59 180 L56 171 L47 168 Z" fill="#f43f6b" />
+              <path class="stage-sparkle" style="animation-delay: 0.8s" d="M304 160 L307 151 L310 160 L319 163 L310 166 L307 175 L304 166 L295 163 Z" fill="#a855f7" />
+              <path class="stage-sparkle" style="animation-delay: 1.5s" d="M112 68 L114 61 L116 68 L123 70 L116 72 L114 79 L112 72 L105 70 Z" fill="#fb7192" />
+              <path class="stage-sparkle" style="animation-delay: 0.4s" d="M248 64 L250 57 L252 64 L259 66 L252 68 L250 75 L248 68 L241 66 Z" fill="#fb7192" />
+
+              <!-- CUTE WHITE KITTEN MESSENGER (Peeking & Holding Bouquet) -->
+              <g id="kitten-messenger">
+                <!-- Left & Right Ears -->
+                <polygon points="124,116 114,72 152,96" fill="#ffffff" stroke="#f43f6b" stroke-width="3" stroke-linejoin="round" />
+                <polygon points="128,110 121,81 146,98" fill="#fecdd8" />
+                <polygon points="236,116 246,72 208,96" fill="#ffffff" stroke="#f43f6b" stroke-width="3" stroke-linejoin="round" />
+                <polygon points="232,110 239,81 214,98" fill="#fecdd8" />
+
+                <!-- Kitten Head -->
+                <ellipse cx="180" cy="134" rx="58" ry="46" fill="#ffffff" stroke="#f43f6b" stroke-width="3" />
+
+                <!-- Happy Sparkly Eyes -->
+                <circle cx="158" cy="130" r="6.5" fill="#4a2535" />
+                <circle cx="156" cy="127.5" r="2.4" fill="#ffffff" />
+                <circle cx="160.5" cy="131.5" r="1.1" fill="#ffffff" />
+
+                <circle cx="202" cy="130" r="6.5" fill="#4a2535" />
+                <circle cx="200" cy="127.5" r="2.4" fill="#ffffff" />
+                <circle cx="204.5" cy="131.5" r="1.1" fill="#ffffff" />
+
+                <!-- Rosy Blushing Cheeks -->
+                <ellipse cx="143" cy="142" rx="8.5" ry="4.8" fill="#fda4b8" opacity="0.8" />
+                <ellipse cx="217" cy="142" rx="8.5" ry="4.8" fill="#fda4b8" opacity="0.8" />
+
+                <!-- Little Pink Nose & Happy Cat Smile -->
+                <polygon points="176,139 184,139 180,144" fill="#fb7192" />
+                <path d="M170 147 Q175 153 180 146 Q185 153 190 147" fill="none" stroke="#4a2535" stroke-width="2.6" stroke-linecap="round" />
+
+                <!-- Whiskers -->
+                <line x1="112" y1="132" x2="134" y2="135" stroke="#fda4b8" stroke-width="2.2" stroke-linecap="round" />
+                <line x1="112" y1="142" x2="134" y2="141" stroke="#fda4b8" stroke-width="2.2" stroke-linecap="round" />
+                <line x1="226" y1="135" x2="248" y2="132" stroke="#fda4b8" stroke-width="2.2" stroke-linecap="round" />
+                <line x1="226" y1="141" x2="248" y2="142" stroke="#fda4b8" stroke-width="2.2" stroke-linecap="round" />
+              </g>
+
+              <!-- BOUQUET BACK WRAPPING CONE -->
+              <polygon points="180,334 106,204 180,186 254,204" fill="url(#wrapBack)" stroke="#d4a373" stroke-width="2.5" stroke-linejoin="round" />
+
+              <!-- LUSH 9-TULIP BOUQUET (Back Row + Front Row + Leaves) -->
+              <!-- Back Row (4 Tulips) -->
+              <g class="tulip-sway-left">
+                <!-- Stem & Tulip 1 (Lavender) -->
+                <path d="M180 265 Q148 225 130 186" fill="none" stroke="#4d7c5b" stroke-width="4.5" stroke-linecap="round" />
+                <g transform="translate(130, 176) rotate(-22)">
+                  <path d="M-14 0 C-14 -18, 14 -18, 14 0 C14 13, 7 18, 0 18 C-7 18, -14 13, -14 0 Z" fill="#c084fc" />
+                  <path d="M-7 -2 L0 -16 L7 -2" fill="#e9d5ff" />
+                </g>
+
+                <!-- Stem & Tulip 2 (Coral Pink) -->
+                <path d="M180 265 Q165 218 158 174" fill="none" stroke="#4d7c5b" stroke-width="4.5" stroke-linecap="round" />
+                <g transform="translate(158, 164) rotate(-9)">
+                  <path d="M-15 0 C-15 -19, 15 -19, 15 0 C15 14, 8 19, 0 19 C-8 19, -15 14, -15 0 Z" fill="#fb7185" />
+                  <path d="M-8 -2 L0 -17 L8 -2" fill="#fecdd3" />
+                </g>
+              </g>
+
+              <g class="tulip-sway-right">
+                <!-- Stem & Tulip 3 (Soft Peach) -->
+                <path d="M180 265 Q195 218 202 174" fill="none" stroke="#4d7c5b" stroke-width="4.5" stroke-linecap="round" />
+                <g transform="translate(202, 164) rotate(9)">
+                  <path d="M-15 0 C-15 -19, 15 -19, 15 0 C15 14, 8 19, 0 19 C-8 19, -15 14, -15 0 Z" fill="#fda4af" />
+                  <path d="M-8 -2 L0 -17 L8 -2" fill="#ffe4e6" />
+                </g>
+
+                <!-- Stem & Tulip 4 (Lavender Rose) -->
+                <path d="M180 265 Q212 225 230 186" fill="none" stroke="#4d7c5b" stroke-width="4.5" stroke-linecap="round" />
+                <g transform="translate(230, 176) rotate(22)">
+                  <path d="M-14 0 C-14 -18, 14 -18, 14 0 C14 13, 7 18, 0 18 C-7 18, -14 13, -14 0 Z" fill="#d8b4fe" />
+                  <path d="M-7 -2 L0 -16 L7 -2" fill="#f3e8ff" />
+                </g>
+              </g>
+
+              <!-- Lush Green Tulip Leaves -->
+              <path d="M150 236 Q116 212 114 188 Q138 198 156 228 Z" fill="#689f77" />
+              <path d="M210 236 Q244 212 246 188 Q222 198 204 228 Z" fill="#689f77" />
+              <path d="M168 232 Q145 196 150 176 Q168 194 174 228 Z" fill="#528863" />
+              <path d="M192 232 Q215 196 210 176 Q192 194 186 228 Z" fill="#528863" />
+
+              <!-- Front Row (5 Hero Tulips) -->
+              <g class="tulip-sway-left">
+                <!-- Tulip 5 (Far Left Blush) -->
+                <g transform="translate(122, 204) rotate(-28)">
+                  <path d="M-14 0 C-14 -18, 14 -18, 14 0 C14 13, 7 18, 0 18 C-7 18, -14 13, -14 0 Z" fill="#f472b6" />
+                  <path d="M-7 -2 L0 -16 L7 -2" fill="#fbcfe8" />
+                </g>
+
+                <!-- Tulip 6 (Mid Left Rose) -->
+                <g transform="translate(150, 194) rotate(-12)">
+                  <path d="M-16 0 C-16 -20, 16 -20, 16 0 C16 14, 8 20, 0 20 C-8 20, -16 14, -16 0 Z" fill="#f43f6b" />
+                  <path d="M-8 -2 L0 -18 L8 -2" fill="#fda4b8" />
+                </g>
+              </g>
+
+              <!-- Tulip 7 (Center Hero Tulip) -->
+              <g transform="translate(180, 188)">
+                <path d="M-17 0 C-17 -22, 17 -22, 17 0 C17 15, 9 21, 0 21 C-9 21, -17 15, -17 0 Z" fill="#e11d52" />
+                <path d="M-9 -2 L0 -20 L9 -2" fill="#fb7192" />
+              </g>
+
+              <g class="tulip-sway-right">
+                <!-- Tulip 8 (Mid Right Rose) -->
+                <g transform="translate(210, 194) rotate(12)">
+                  <path d="M-16 0 C-16 -20, 16 -20, 16 0 C16 14, 8 20, 0 20 C-8 20, -16 14, -16 0 Z" fill="#f43f6b" />
+                  <path d="M-8 -2 L0 -18 L8 -2" fill="#fda4b8" />
+                </g>
+
+                <!-- Tulip 9 (Far Right Blush) -->
+                <g transform="translate(238, 204) rotate(28)">
+                  <path d="M-14 0 C-14 -18, 14 -18, 14 0 C14 13, 7 18, 0 18 C-7 18, -14 13, -14 0 Z" fill="#f472b6" />
+                  <path d="M-7 -2 L0 -16 L7 -2" fill="#fbcfe8" />
+                </g>
+              </g>
+
+              <!-- BOUQUET FRONT PASTEL WRAP -->
+              <path d="M106 204 L180 236 L254 204 L180 338 Z" fill="url(#wrapFront)" stroke="#f43f6b" stroke-width="2.5" stroke-linejoin="round" />
+              <!-- Subtle Fold Lines -->
+              <line x1="180" y1="236" x2="180" y2="336" stroke="#fda4b8" stroke-width="2" />
+              <line x1="138" y1="218" x2="180" y2="336" stroke="#fecdd8" stroke-width="1.5" />
+              <line x1="222" y1="218" x2="180" y2="336" stroke="#fecdd8" stroke-width="1.5" />
+
+              <!-- SHIMMERING SATIN RIBBON & BOW -->
+              <path d="M148 276 Q180 288 212 276" fill="none" stroke="url(#ribbonGrad)" stroke-width="9" stroke-linecap="round" />
+              <!-- Left & Right Bow Loops -->
+              <path d="M180 281 C156 264, 144 282, 164 292 C172 295, 178 287, 180 281 Z" fill="url(#ribbonGrad)" />
+              <path d="M180 281 C204 264, 216 282, 196 292 C188 295, 182 287, 180 281 Z" fill="url(#ribbonGrad)" />
+              <!-- Ribbon Tails -->
+              <path d="M176 285 L162 320 L171 316 L179 287 Z" fill="#e11d52" />
+              <path d="M184 285 L198 320 L189 316 L181 287 Z" fill="#e11d52" />
+              <!-- Center Ribbon Knot -->
+              <circle cx="180" cy="281" r="7" fill="#fb7192" stroke="#ffffff" stroke-width="1.5" />
+
+              <!-- CUTE KITTEN PAWS HOLDING THE BOUQUET -->
+              <ellipse cx="144" cy="264" rx="13" ry="10" fill="#ffffff" stroke="#f43f6b" stroke-width="2.5" />
+              <circle cx="144" cy="265" r="3.5" fill="#fecdd8" />
+              <ellipse cx="216" cy="264" rx="13" ry="10" fill="#ffffff" stroke="#f43f6b" stroke-width="2.5" />
+              <circle cx="216" cy="265" r="3.5" fill="#fecdd8" />
+            </svg>
+          </div>
+
+          <!-- Signature Tag Beneath Bouquet -->
+          <div class="mt-2 inline-flex items-center gap-2 rounded-full bg-white/95 border border-blush-200 px-4 py-1.5 shadow-sm">
+            <span class="font-script text-xl sm:text-2xl font-bold text-blush-600">
+              From Priyu, with all my heart 🐾
+            </span>
+          </div>
+        </div>
+
+        <!-- Interactive Tulip Shower Button & Feedback -->
+        <div class="mt-7 max-w-md mx-auto space-y-3">
+          <button
+            id="shower-tulips-btn"
+            type="button"
+            class="w-full rounded-2xl bg-gradient-to-r from-blush-500 via-pink-500 to-purple-500 px-6 py-4 text-base font-bold text-white shadow-lg shadow-blush-400/35 hover:scale-[1.02] active:scale-[0.98] transition cursor-pointer"
+          >
+            🌷 Shower Her With More Tulips
+          </button>
+
+          <p id="tulip-shower-msg" class="hidden rounded-xl bg-blush-50 border border-blush-200 px-4 py-2 text-xs sm:text-sm font-bold text-blush-600">
+            🌷💖 Extra tulips, kittens & endless love showered on Stupid Boss! ✨
+          </p>
+        </div>
+      </div>
+
+      <!-- Page 6 Bottom Navigation -->
+      <div class="mt-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-3">
+        <button
+          type="button"
+          onclick="goToPage(5)"
+          class="w-full sm:w-auto rounded-2xl border-2 border-blush-200 bg-white px-6 py-3 text-sm sm:text-base font-bold text-blush-600 hover:bg-blush-50 transition cursor-pointer"
+        >
+          ← Back
+        </button>
+        <button
+          type="button"
+          onclick="goToPage(2)"
+          class="w-full sm:w-auto rounded-2xl bg-blush-100 border border-blush-200 px-6 py-3 text-sm sm:text-base font-bold text-blush-600 hover:bg-blush-200 transition cursor-pointer"
+        >
+          🔄 Replay From Start
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center px-4 pt-10 text-xs sm:text-sm text-gray-500">
+      <p>Made with 🌷 tulips, 🐱 cute kittens & endless love by <span class="font-bold text-blush-500">Priyu</span> for <span class="font-bold text-blush-500">Stupid Boss</span>.</p>
+    </footer>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- JAVASCRIPT: PASSWORD UNLOCK, MULTI-PAGE NAVIGATION & CONFETTI         -->
+  <!-- ===================================================================== -->
+  <script>
+    /* ---------------------------------------------------------------------
+     * GRACEFUL SVG PLACEHOLDER GENERATOR (Shows exact filename for GitHub)
+     * --------------------------------------------------------------------- */
+    function setFallbackSvg(imgEl, filename, labelText, bgHex) {
+      imgEl.onerror = null;
+      const svg = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="600" height="720" viewBox="0 0 600 720">
+          <rect width="600" height="720" fill="${bgHex || '#ffe4ec'}" />
+          <circle cx="300" cy="270" r="95" fill="#ffffff" opacity="0.9" />
+          <text x="300" y="290" font-size="82" text-anchor="middle">🌷🐱</text>
+          <rect x="70" y="405" width="460" height="135" rx="24" fill="#ffffff" opacity="0.95" />
+          <text x="300" y="460" font-family="sans-serif" font-size="28" font-weight="bold" fill="#e11d52" text-anchor="middle">${filename}</text>
+          <text x="300" y="505" font-family="sans-serif" font-size="20" fill="#4a2535" text-anchor="middle">${labelText}</text>
+        </svg>
+      `.trim();
+      imgEl.src = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+    }
+
+    /* ---------------------------------------------------------------------
+     * MULTI-PAGE NAVIGATION CONTROLLER (PAGES 2, 3, 4, 5, 6)
+     * --------------------------------------------------------------------- */
+    function goToPage(pageNumber) {
+      document.querySelectorAll('.app-page').forEach((sec) => {
+        sec.classList.remove('active');
+        sec.style.display = 'none';
+      });
+
+      const target = document.getElementById(`page-${pageNumber}`);
+      if (target) {
+        target.classList.add('active');
+        target.style.display = 'block';
+        target.style.opacity = '1';
+      }
+
+      document.querySelectorAll('.step-pill').forEach((pill) => {
+        const step = Number(pill.dataset.step);
+        if (step === pageNumber) {
+          pill.classList.remove('bg-blush-100', 'text-blush-600');
+          pill.classList.add('bg-blush-500', 'text-white', 'shadow-sm');
+        } else {
+          pill.classList.remove('bg-blush-500', 'text-white', 'shadow-sm');
+          pill.classList.add('bg-blush-100', 'text-blush-600');
+        }
+      });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      launchConfettiBurst(pageNumber === 6 ? 80 : 35);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      /* -------------------------------------------------------------------
+       * 1. PASSWORD GATE LOGIC (12/12/2008 -> IMMEDIATELY REVEALS PAGE 2)
+       * ------------------------------------------------------------------- */
+      const page1 = document.getElementById('page-1');
+      const passwordCard = document.getElementById('password-card');
+      const unlockForm = document.getElementById('unlock-form');
+      const passwordInput = document.getElementById('password-input');
+      const passwordError = document.getElementById('password-error');
+      const unlockedApp = document.getElementById('unlocked-app');
+
+      const validPasswords = ['12/12/2008', '12-12-2008', '12.12.2008', '12122008'];
+
+      unlockForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const entered = passwordInput.value.trim();
+
+        if (validPasswords.includes(entered)) {
+          passwordError.classList.add('hidden');
+          page1.style.display = 'none';
+          unlockedApp.classList.remove('hidden');
+          unlockedApp.style.display = 'flex';
+          goToPage(2);
+          launchConfettiBurst(110);
+        } else {
+          passwordError.classList.remove('hidden');
+          passwordCard.classList.remove('shake-box');
+          void passwordCard.offsetWidth;
+          passwordCard.classList.add('shake-box');
+          passwordInput.focus();
+        }
+      });
+
+      /* -------------------------------------------------------------------
+       * 2. PAGE 6 GRAND FINALE TULIP SHOWER BUTTON
+       * ------------------------------------------------------------------- */
+      const showerTulipsBtn = document.getElementById('shower-tulips-btn');
+      const tulipShowerMsg = document.getElementById('tulip-shower-msg');
+
+      if (showerTulipsBtn) {
+        showerTulipsBtn.addEventListener('click', () => {
+          tulipShowerMsg.classList.remove('hidden');
+          launchConfettiBurst(130);
+        });
+      }
+
+      /* -------------------------------------------------------------------
+       * 3. TULIP PETAL, HEART & KITTEN CONFETTI ENGINE (OUTER MARGINS ONLY)
+       * ------------------------------------------------------------------- */
+      const canvas = document.getElementById('confetti-canvas');
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      let animFrameId = null;
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+
+      const symbols = ['🌷', '💖', '🐾'];
+
+      window.launchConfettiBurst = function (count = 50) {
+        for (let i = 0; i < count; i++) {
+          // Strictly outer left (0%-12%) and outer right (88%-100%) margins
+          const onLeftSide = Math.random() < 0.5;
+          const edgeRatio = onLeftSide
+            ? Math.random() * 0.12
+            : 0.88 + Math.random() * 0.12;
+
+          particles.push({
+            x: edgeRatio * canvas.width,
+            y: -20 - Math.random() * 140,
+            size: 15 + Math.random() * 7,
+            speedY: 1.5 + Math.random() * 2.4,
+            speedX: (Math.random() - 0.5) * 0.5,
+            rotation: Math.random() * Math.PI * 2,
+            rotSpeed: (Math.random() - 0.5) * 0.04,
+            symbol: symbols[Math.floor(Math.random() * symbols.length)],
+            opacity: 0.85
+          });
+        }
+        if (!animFrameId) {
+          animateConfetti();
+        }
+      };
+
+      function animateConfetti() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach((p) => {
+          p.y += p.speedY;
+          p.x += p.speedX + Math.sin(p.y * 0.02) * 0.25;
+          p.rotation += p.rotSpeed;
+
+          if (p.y > canvas.height - 80) {
+            p.opacity -= 0.02;
+          }
+
+          ctx.save();
+          ctx.globalAlpha = Math.max(0, p.opacity);
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rotation);
+          ctx.font = `${p.size}px serif`;
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(p.symbol, 0, 0);
+          ctx.restore();
+        });
+
+        particles = particles.filter((p) => p.opacity > 0 && p.y < canvas.height + 40);
+
+        if (particles.length > 0) {
+          animFrameId = requestAnimationFrame(animateConfetti);
+        } else {
+          animFrameId = null;
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
